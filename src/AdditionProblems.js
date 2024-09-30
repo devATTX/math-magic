@@ -108,7 +108,7 @@ const AdditionProblems = () => {
 	const correctCount = problems.filter((problem) => problem.isCorrect === true).length;
 
 	return (
-		<div style={{ padding: "20px" }}>
+		<div>
 			<h1>Addition Questions</h1>
 			<div style={{ marginBottom: "20px" }}>
 				<label>
@@ -121,7 +121,9 @@ const AdditionProblems = () => {
 						style={{ marginLeft: "10px", marginRight: "10px", width: "60px" }}
 					/>
 				</label>
-				<button onClick={handleGenerate}>Generate</button>
+				<button className="page-button" onClick={handleGenerate}>
+					Generate
+				</button>
 			</div>
 			<div className="problems-grid">
 				{problems.map((problem, index) => (

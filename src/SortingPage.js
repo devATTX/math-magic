@@ -72,7 +72,7 @@ const SortingPage = () => {
 	};
 
 	return (
-		<div className="sorting-background" style={{ padding: "20px" }}>
+		<div className="sorting-background">
 			<h1>Sorting Challenge</h1>
 			<div style={{ marginBottom: "20px" }}>
 				{" "}
@@ -84,10 +84,9 @@ const SortingPage = () => {
 						value={maxNum}
 						onChange={(e) => setMaxNum(Number(e.target.value))} // Update maxNum state on input change
 						min="10" // Minimum value is set to 10
-						style={{ marginLeft: "10px", marginRight: "10px", width: "100px" }} // Add margin and set width
 					/>
 				</label>
-				<button onClick={handleGenerate} style={{ padding: "5px 10px" }}>
+				<button className="page-button" onClick={handleGenerate} style={{ padding: "5px 10px" }}>
 					Generate
 				</button>
 			</div>
@@ -117,7 +116,9 @@ const SortingPage = () => {
 						<p>{problem.userAnswer.join(", ")}</p>
 					</div>
 
-					<button onClick={() => checkAnswer(index)}>Check Answer</button>
+					<button onClick={() => checkAnswer(index)} className="page-button">
+						Check Answer
+					</button>
 					<button onClick={() => clearSelections(index)} className="clear-button">
 						Clear
 					</button>

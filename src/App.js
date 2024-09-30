@@ -6,7 +6,7 @@ import SortingPage from "./SortingPage";
 const App = () => {
 	return (
 		<Router>
-			<div style={{ padding: "20px 300px" }}>
+			<div style={{ padding: "30px" }}>
 				<h1>Math App</h1>
 				<nav>
 					<ul style={{ listStyle: "none", padding: 0 }}>
