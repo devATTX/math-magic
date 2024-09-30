@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import AdditionProblems from "./AdditionProblems";
+import SortingPage from "./SortingPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<Router>
+			<div style={{ padding: "20px 300px" }}>
+				<h1>Math App</h1>
+				<nav>
+					<ul style={{ listStyle: "none", padding: 0 }}>
+						<li>
+							<Link to="/addition">Addition Problems</Link>
+						</li>
+						<li>
+							<Link to="/sorting">Sorting Problems</Link>
+						</li>
+					</ul>
+				</nav>
+
+				<Routes>
+					<Route path="/addition" element={<AdditionProblems />} />
+					<Route path="/sorting" element={<SortingPage />} />
+				</Routes>
+			</div>
+		</Router>
+	);
+};
 
 export default App;
